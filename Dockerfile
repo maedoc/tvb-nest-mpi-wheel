@@ -8,7 +8,7 @@ RUN apt-get update \
 WORKDIR /usr/local/src
 
 RUN curl -L http://www.mpich.org/static/downloads/$MPICH_VER/mpich-$MPICH_VER.tar.gz | \
-	tar xf - \
+	tar xzf - \
  && cd mpich-$MPICH_VER \
  && ./configure --disable-fortran --prefix=/usr/local \
  && make -j4 install
