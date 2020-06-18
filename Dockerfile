@@ -3,7 +3,7 @@ FROM ubuntu
 ARG MPICH_VER=3.3.2
 
 RUN apt-get update \
- && apt-get install -y g++ gcc gfortran make
+ && apt-get install -y g++ gcc gfortran make curl
 
 WORKDIR /usr/local/src
 
