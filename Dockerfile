@@ -2,6 +2,9 @@ FROM ubuntu
 
 ARG MPICH_VER=3.3.2
 
+# avoid tzdata install asking for an answer
+ENV DEBIAN_FRONTEND="noninteractive"
+
 RUN apt-get update \
  && apt-get install -y g++ gcc gfortran make curl build-essential cmake \
                        python3-distutils python3-dev python3-pip libltdl-dev \
