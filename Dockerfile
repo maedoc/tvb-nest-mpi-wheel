@@ -18,6 +18,6 @@ RUN curl -L http://www.mpich.org/static/downloads/$MPICH_VER/mpich-$MPICH_VER.ta
  && ./configure --disable-fortran --prefix=/usr \
  && make -j4 install
 
-RUN pip3 install --upgrade pip numpy
-RUN pip3 install nose cython Pillow matplotlib mpi4py scipy elephant \
+RUN pip3 install --upgrade pip scipy Cython
+RUN pip3 install nose Pillow matplotlib mpi4py scipy elephant \
  				tvb-data tvb-gdist tvb-library
